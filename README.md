@@ -152,5 +152,57 @@ The script performs the following steps:
 12. If the user chooses to create a Git repository, it initializes a Git repository, adds all files, and makes the initial commit.
 13. Finally, it displays a message indicating the completion of the project setup.
 
+## The final structure:
+
+```markdown
+.
+├── app
+│   ├── api
+│   │   ├── __init__.py
+│   │   └── endpoints.py
+│   ├── config
+│   │   ├── __init__.py
+│   │   └── settings.py
+│   ├── models
+│   │   ├── __init__.py
+│   │   └── model.py
+│   └── main.py
+├── data
+│   ├── external
+│   │   ├── __init__.py
+│   │   └── download.py
+│   ├── processed
+│   │   ├── __init__.py
+│   │   └── preprocessing.py
+│   ├── raw
+│   │   ├── __init__.py
+│   │   └── dataset.csv
+│   └── splits
+│       ├── __init__.py
+│       ├── train.csv
+│       ├── validation.csv
+│       └── test.csv
+├── docs
+│   ├── architecture.md
+│   └── user_guide.md
+├── models
+│   ├── __init__.py
+│   ├── train.py
+│   └── evaluate.py
+├── notebooks
+│   ├── exploratory_data_analysis.ipynb
+│   └── model_training.ipynb
+├── tests
+│   ├── __init__.py
+│   ├── test_data_processing.py
+│   ├── test_model.py
+│   └── test_endpoints.py
+├── .gitignore
+├── Dockerfile
+├── requirements.txt
+├── README.md
+└── LICENSE
+```
+
 Feel free to customize the script according to your specific project requirements.
 Please note that the script assumes you have Python and Git installed on your system.
