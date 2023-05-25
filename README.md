@@ -74,14 +74,28 @@ REM Create a virtual environment and activate it
 python -m venv MyEnv
 .\MyEnv\Scripts\Activate.ps1
 
+REM Create requirements.txt file with basic Python libraries
+echo pandas >> requirements.txt
+echo numpy >> requirements.txt
+echo matplotlib >> requirements.txt
+echo seaborn >> requirements.txt
+echo scikit-learn >> requirements.txt
+echo jupyterlab >> requirements.txt
+
 REM Upgrade pip
 python -m pip install --upgrade pip
 
-REM Install basic Python modules for ML projects
-python -m pip install numpy pandas matplotlib scikit-learn
+REM Install required Python modules
+pip install -r requirements.txt
 
-REM Freeze installed modules into requirements.txt
-pip freeze > requirements.txt
+REM Create requirements.txt file with basic Python libraries
+echo pandas >> requirements.txt
+echo numpy >> requirements.txt
+echo matplotlib >> requirements.txt
+echo seaborn >> requirements.txt
+echo scikit-learn >> requirements.txt
+echo jupyterlab >> requirements.txt
+
 
 REM Add basic .gitignore lines
 echo __pycache__/ >> .gitignore
@@ -110,6 +124,16 @@ if /i "%create_git_repo%"=="Y" (
 echo Project setup completed.
 ```
 
+Next open vscode (or your preffered IDE) and start the virtual envirement:
+```shell
+.\MyEnv\Scripts\Activate.ps1
+```
+
+you can start by installing the basic modules i included in your requirements file.
+```shell
+python -m pip install .\requirements.txt
+```
+
 
 ## Explanation
 
@@ -122,14 +146,11 @@ The script performs the following steps:
 5. It creates initial Python script files in relevant subdirectories, such as endpoints.py, settings.py, model.py, etc.
 6. It creates initial Jupyter notebooks for exploratory data analysis and model training.
 7. It creates necessary files like .gitignore, Dockerfile, README.md, and LICENSE.
-8. It sets up a virtual environment named MyEnv and activates it.
-9. It upgrades pip to the latest version.
-10. It installs basic Python modules commonly used in machine learning projects, such as numpy, pandas, matplotlib, and scikit-learn.
-11. It freezes the installed modules into a requirements.txt file.
-12. It adds basic lines to the .gitignore file to exclude common files and directories.
-13. It prompts the user to decide whether to create a Git repository for the project.
-14. If the user chooses to create a Git repository, it initializes a Git repository, adds all files, and makes the initial commit.
-15. Finally, it displays a message indicating the completion of the project setup.
-16. Feel free to customize the script according to your specific project requirements.
+8. It sets up a virtual environment named MyEnv.
+10. It adds basic lines to the .gitignore file to exclude common files and directories.
+11. It prompts the user to decide whether to create a Git repository for the project.
+12. If the user chooses to create a Git repository, it initializes a Git repository, adds all files, and makes the initial commit.
+13. Finally, it displays a message indicating the completion of the project setup.
 
+Feel free to customize the script according to your specific project requirements.
 Please note that the script assumes you have Python and Git installed on your system.
