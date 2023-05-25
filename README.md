@@ -108,8 +108,10 @@ if /i "%create_git_repo%"=="Y" (
 )
 
 echo Project setup completed.
+```
 
-# Explanation
+
+## Explanation
 
 The script performs the following steps:
 
